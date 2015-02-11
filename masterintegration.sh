@@ -98,7 +98,7 @@ function clean__up() {
 	do
 		current_ctrs=${current_ctrs//"$i"/$blank}
 	done
-	if [[ ! -z "${current_ctrs}" ]] ;then
+	if [[ ! -z "${current_ctrs//[[:space:]]}" ]] ;then
 		while true; do
 			echo -e "\nDelete the following CTR's:\n"
 			for i in ${current_ctrs// / } ;
